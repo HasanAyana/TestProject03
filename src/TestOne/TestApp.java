@@ -124,6 +124,7 @@ public class TestApp extends BaseDriver {
         wait.until(ExpectedConditions.elementToBeClickable(driver.findElement(By.cssSelector("[class='button-1 confirm-order-next-step-button']"))));
         aksiyonlar.click(driver.findElement(By.cssSelector("[class='button-1 confirm-order-next-step-button']"))).build().perform();
 
+        System.out.println("");
         WebElement productCheck= driver.findElement(By.className("title"));
         Assert.assertFalse(productCheck.getText().contains("Your order has been successfully processed!"));
 
